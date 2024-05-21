@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34316.72
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{BD33E02F-0000-48C3-B722-16EBD88F154A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{9877C083-1A3B-45AC-B179-A56C5D9DFBC0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{2BCA12D6-2FE9-452E-A59C-37AC7A8CAFC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{996F0697-13CA-4496-AB6A-0493C86AE239}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasteCart.Services.CouponAPI", "..\TasteCart.Services.CouponAPI\TasteCart.Services.CouponAPI.csproj", "{EB01226D-A534-4066-9FBA-8F71A8E1F948}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB01226D-A534-4066-9FBA-8F71A8E1F948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB01226D-A534-4066-9FBA-8F71A8E1F948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB01226D-A534-4066-9FBA-8F71A8E1F948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB01226D-A534-4066-9FBA-8F71A8E1F948}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EB01226D-A534-4066-9FBA-8F71A8E1F948} = {996F0697-13CA-4496-AB6A-0493C86AE239}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1470C00C-8142-4604-9658-8B9A68289253}
+	EndGlobalSection
+EndGlobal
