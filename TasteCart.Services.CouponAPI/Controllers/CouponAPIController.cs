@@ -55,12 +55,12 @@ namespace TasteCart.Services.CouponAPI.Controllers
 
 
         [HttpGet]
-        [Route("GetByCode{Code}")]
+        [Route("GetByCode/{code}")]
         public ResponseDto GetByCode(string code)   
          {
             try
             {
-                Coupon obj1 = _db.Coupons.FirstOrDefault(u => u.CouponCode.ToLower()== code.ToLower());
+                Coupon obj1 = _db.Coupons.FirstOrDefault(u =>u.CouponCode.ToLower()== code.ToLower());
                 if(obj1 == null)
                 {
                     _response.IsSuccess=false;
