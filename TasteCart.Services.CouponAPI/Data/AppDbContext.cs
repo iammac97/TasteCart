@@ -37,6 +37,14 @@ namespace TasteCart.Services.CouponAPI.Data
                 DiscountAmount = 50,
                 MinAmount = 100,
             });
+
+            modelBuilder.Entity<Coupon>().HasData(new Coupon
+            {
+                CouponId = 4,
+                CouponCode = "60OFF",
+                DiscountAmount = 60,
+                MinAmount = 120,
+            });
         }
     }
 }

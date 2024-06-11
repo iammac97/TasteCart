@@ -64,6 +64,13 @@ namespace TasteCart.Services.CouponAPI.Migrations
                             CouponCode = "50OFF",
                             DiscountAmount = 50.0,
                             MinAmount = 100
+                        },
+                        new
+                        {
+                            CouponId = 4,
+                            CouponCode = "60OFF",
+                            DiscountAmount = 60.0,
+                            MinAmount = 120
                         });
                 });
 #pragma warning restore 612, 618

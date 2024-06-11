@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System.ComponentModel.DataAnnotations;
+using TasteCart.Services.CouponAPI.Models.Dto;
 
 namespace TasteCart.Services.CouponAPI.Models
 {
@@ -12,7 +13,9 @@ namespace TasteCart.Services.CouponAPI.Models
         [Required]
         public double DiscountAmount { get; set; }
         public int MinAmount {  get; set; }
-       // public DateTime LastUpdated { get; set; }
+
+  
+        // public DateTime LastUpdated { get; set; }
 
     }
 }
