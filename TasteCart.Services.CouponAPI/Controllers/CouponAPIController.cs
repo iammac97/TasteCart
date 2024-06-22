@@ -9,7 +9,7 @@ using TasteCart.Services.CouponAPI.Models.Dto;
 
 namespace TasteCart.Services.CouponAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/coupon")]
     [ApiController]
     public class CouponAPIController : ControllerBase
     {
@@ -27,8 +27,6 @@ namespace TasteCart.Services.CouponAPI.Controllers
         [HttpGet]
         public ResponseDto Get()
         {
-           // _response.IsSuccess = true;
-            //_response.Message = "Data Fetched Successfully...";
             try
             {
                 IEnumerable<Coupon> objList = _db.Coupons.ToList();
@@ -44,11 +42,9 @@ namespace TasteCart.Services.CouponAPI.Controllers
 
 
         [HttpGet]
-        [Route("GetById/{id:int}")]
+        [Route("GetById{id:int}")]
         public ResponseDto Get(int id)
         {
-            //.IsSuccess = true;
-            //_response.Message = "Data Fetched Successfully..";
             try
             {
                Coupon obj = _db.Coupons.First(u=>u.CouponId==id);
@@ -64,11 +60,9 @@ namespace TasteCart.Services.CouponAPI.Controllers
 
 
         [HttpGet]
-        [Route("GetByCode/{code}")]
+        [Route("GetByCode{code}")]
         public ResponseDto GetByCode(string code)   
          {
-            //_response.IsSuccess = true;
-            //_response.Message = "Data Fetched Successfully..";
             try
             {
                 Coupon obj1 = _db.Coupons.FirstOrDefault(u =>u.CouponCode.ToLower()== code.ToLower());
@@ -90,8 +84,6 @@ namespace TasteCart.Services.CouponAPI.Controllers
 
         public ResponseDto Post([FromBody] CouponDto couponDto) 
         {
-            //_response.IsSuccess = true;
-            //_response.Message = "Data Successfully Added..";
             try
             {
                 Coupon obj = _mapper.Map<Coupon>(couponDto);
@@ -108,11 +100,9 @@ namespace TasteCart.Services.CouponAPI.Controllers
         }
 
         [HttpPut]
-        [Route("UpdateById/{id}")]
+        [Route("UpdateById/{id:int}")]
         public ResponseDto put([FromBody] CouponDto couponDto)
         {
-            //_response.IsSuccess = true;
-            //_response.Message = "Data Successfully Updated..";
             try
             {
                 Coupon obj=_mapper.Map<Coupon>(couponDto);
@@ -132,13 +122,11 @@ namespace TasteCart.Services.CouponAPI.Controllers
         }
 
         [HttpDelete]
-        [Route("DeleteById/{id}")]
+        [Route("DeleteById{id:int}")]
         public ResponseDto Delete(int id)
         {
             try
             {
-                //_response.IsSuccess = true;
-                //_response.Message = "Data Successfully Deleted..";
                 Coupon obj = _db.Coupons.First(u=>u.CouponId==id);
                 _db.Coupons.Remove(obj);
                 _db.SaveChanges();
