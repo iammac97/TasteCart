@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using TasteCart.Service.AuthAPI.Models.Dto;
-using TasteCart.Service.AuthAPI.Service.IService;
+using TasteCart.Services.AuthAPI.Models.Dto;
+using TasteCart.Services.AuthAPI.Service.IService;
 using TasteCart.Services.AuthAPI.Models.Dto;
 
 namespace TasteCart.Services.AuthAPI.Controllers
@@ -44,6 +44,19 @@ namespace TasteCart.Services.AuthAPI.Controllers
                 return BadRequest(_response);
             }
             _response.Result= loginResponse;
+            return Ok(_response);
+        }
+
+        [HttpPost("AssignRole")]
+        public async Task<IActionResult> AssignRole([FromBody] RegistrationRequestDto model)
+        {
+            var assignRoleSuccessful = await _authService.AssignRole(model.Email,model.Role.ToUpper());
+            if (!assignRoleSuccessful)
+            {
+                _response.IsSuccess = false;
+                _response.Message = "Error encountered!";
+                return BadRequest(_response);
+            }
             return Ok(_response);
         }
 

@@ -1,4 +1,4 @@
-﻿namespace TasteCart.Service.AuthAPI.Models.Dto
+﻿namespace TasteCart.Services.AuthAPI.Models.Dto
 {
     public class LoginResponseDto
     {

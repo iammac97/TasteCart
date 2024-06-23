@@ -1,4 +1,4 @@
-﻿namespace TasteCart.Service.AuthAPI.Models
+﻿namespace TasteCart.Services.AuthAPI.Models
 {
     public class JwtOptions
     {

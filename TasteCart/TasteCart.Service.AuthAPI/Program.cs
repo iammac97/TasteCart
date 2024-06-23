@@ -2,9 +2,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TasteCart.Services.AuthAPI.Models;
 using TasteCart.Services.AuthAPI.Data;
-using TasteCart.Service.AuthAPI.Models;
-using TasteCart.Service.AuthAPI.Service.IService;
-using TasteCart.Service.AuthAPI.Service;
+using TasteCart.Services.AuthAPI.Models;
+using TasteCart.Services.AuthAPI.Service.IService;
+using TasteCart.Services.AuthAPI.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,6 +25,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFramework
 
 builder.Services.AddControllers();
 builder.Services.AddScoped<IAuthService, AuthService>(); 
+builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

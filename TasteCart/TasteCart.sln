@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasteCart.Services.CouponAP
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasteCart.Web", "TasteCart.Web\TasteCart.Web.csproj", "{B007C885-D83A-4210-8BFA-2EF0264C9A7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TasteCart.Service.AuthAPI", "TasteCart.Service.AuthAPI\TasteCart.Service.AuthAPI.csproj", "{AFFED450-D780-4E76-A6D7-9B5AC6734864}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TasteCart.Services.AuthAPI", "TasteCart.Service.AuthAPI\TasteCart.Services.AuthAPI.csproj", "{AFFED450-D780-4E76-A6D7-9B5AC6734864}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
