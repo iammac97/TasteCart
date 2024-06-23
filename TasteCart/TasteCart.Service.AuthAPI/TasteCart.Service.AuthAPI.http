@@ -1,0 +1,6 @@
+@TasteCart.Service.AuthAPI_HostAddress = http://localhost:5293
+
+GET {{TasteCart.Service.AuthAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
