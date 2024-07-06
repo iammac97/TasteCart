@@ -19,7 +19,7 @@ namespace TasteCart.Web.Service
             {
                 ApiType = SD.ApiType.POST,
                 Data=couponDto,
-                ApiUrl = SD.CouponAPIBase + "/api/coupon"
+                ApiUrl = SD.CouponAPIBase + "/api/coupon/"
             });
         }
 
