@@ -19,8 +19,8 @@ namespace TasteCart.Web.Service
             {
                 ApiType = SD.ApiType.POST,
                 Data = registrationRequestDto,
-                ApiUrl = SD.AuthAPIBase + "api/auth/AssignRole"
-            });
+                ApiUrl = SD.AuthAPIBase+"/api/auth/AssignRole"
+        });
         }
 
         public async Task<ResponseDto?> LoginAsync(LoginRequestDto loginRequestDto)
@@ -39,8 +39,8 @@ namespace TasteCart.Web.Service
             {
                 ApiType = SD.ApiType.POST,
                 Data = registrationRequestDto,
-                ApiUrl = SD.AuthAPIBase + "api/auth/register"
-            });
+                ApiUrl = SD.AuthAPIBase+"/api/auth/register"
+        });
         }
     }
 }

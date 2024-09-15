@@ -13,8 +13,12 @@ builder.Services.AddHttpClient<ICouponService, CouponService>();
 builder.Services.AddHttpClient<IAuthService, AuthService>();
 
 
-SD.CouponAPIBase = builder.Configuration["ServiceUrls:CouponAPI"];
-SD.AuthAPIBase = builder.Configuration["ServiceUrls:AuthAPI"];
+SD.CouponAPIBase = builder.Configuration["ServiceUrls:CouponAPIBase"];
+SD.AuthAPIBase = builder.Configuration["ServiceUrls:AuthAPIBase"];
+
+// Log the API base URLs to verify
+Console.WriteLine($"CouponAPIBase: {SD.CouponAPIBase}");
+Console.WriteLine($"AuthAPIBase: {SD.AuthAPIBase}");
 
 //Register BaseService and CouponService
 builder.Services.AddScoped<IBaseService, BaseService>();
